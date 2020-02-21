@@ -1,8 +1,8 @@
 package main
 
 import (
-	"blackjack/httpd/handlers"
-	"blackjack/platform/games"
+	"blackjack/packages/handlers"
+	"blackjack/packages/platform/games"
 
 	"github.com/gin-gonic/gin"
 )
