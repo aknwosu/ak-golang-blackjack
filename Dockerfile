@@ -2,10 +2,11 @@ FROM golang:1.13
 
 WORKDIR /go/src/github.com/aknwosu/blackjack
 
+# Install dependencies
+
 COPY go.mod .
 
 COPY go.sum .
-
 
 RUN go mod download
 
