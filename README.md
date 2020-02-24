@@ -26,7 +26,7 @@ This game simulates playing a blackjack game where players draw cards from a dec
 
     Run in dev mode "make dev" (uses gin to forward port to 3000)
 
-    Build uding docker "docker build -t ak-golang-blackjack ."
+    Build using docker "docker build -t ak-golang-blackjack ."
 
     Run the docker image "docker run -P ak-golang-blackjack"
 
