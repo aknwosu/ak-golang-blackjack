@@ -13,11 +13,18 @@ type playerStruct struct {
 	Player2 string
 }
 
+// StartGame is the handler for the start-game route
 func StartGame(blkjack *games.Repo) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		body := playerStruct{}
 		c.Bind(&body)
-
+		if body.Player1 == "" {
+			body.Player1 = "You"
+		}
+		if body.Player2 == "" {
+			body.Player2 = "Player 2"
+		}
+		// Get card deck for game
 		blkjack.CardDeck = services.GetDeck()
 
 		result := services.CreateGame(blkjack.CardDeck, body.Player1, body.Player2)
